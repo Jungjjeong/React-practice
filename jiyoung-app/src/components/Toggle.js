@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import useToggle from "../../../hooks/useToggle";
+import useToggle from "../hooks/useToggle";
 
 const ToggleContainer = styled.label`
   display: inline-block;
@@ -50,23 +50,17 @@ const ToggleInput = styled.input`
   }
 `;
 
-const Toggle = ({ name, on = false, disabled = true, onChange, ...props }) => {
+const Toggle = ({ on = false, onChange, ...props }) => {
   const [checked, toggle] = useToggle(on);
 
-  const handleChange = () => {
+  const handleChange = (e) => {
     toggle();
-    onChange && onChange();
+    onChange && onChange(e);
   };
 
   return (
-    <ToggleContainer {...props}>
-      <ToggleInput
-        type="checkbox"
-        name={name}
-        checked={checked}
-        disabled={disabled}
-        onChange={handleChange}
-      />
+    <ToggleContainer>
+      <ToggleInput type="checkbox" onChange={handleChange} checked={checked} />
       <ToggleSwitch />
     </ToggleContainer>
   );
