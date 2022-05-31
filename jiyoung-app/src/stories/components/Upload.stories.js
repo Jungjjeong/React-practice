@@ -1,4 +1,4 @@
-import Upload from ".";
+import Upload from "../../components/_BasicComponent/Upload";
 
 export default {
   title: "Component/Upload",

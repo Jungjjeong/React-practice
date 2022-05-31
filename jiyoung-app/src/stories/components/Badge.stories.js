@@ -1,5 +1,5 @@
-import Bedge from ".";
-import Image from "../Image";
+import Bedge from "../../components/_BasicComponent/Bedge";
+import Image from "../../components/_BasicComponent/Image";
 
 export default {
   title: "Component/Bedge",
