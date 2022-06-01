@@ -1,9 +1,9 @@
-import Bedge from "../../components/_BasicComponent/Bedge";
+import Badge from "../../components/_BasicComponent/Badge";
 import Image from "../../components/_BasicComponent/Image";
 
 export default {
   title: "Component/Bedge",
-  component: Bedge,
+  component: Badge,
   argTypes: {
     count: {
       defaultValue: 10,
@@ -24,24 +24,24 @@ export default {
 
 export const Default = (args) => {
   return (
-    <Bedge {...args}>
+    <Badge {...args}>
       <Image
         src="https://picsum.photos/60"
         width={60}
         style={{ borderRadius: 0 }}
       />
-    </Bedge>
+    </Badge>
   );
 };
 
 export const Dot = () => {
   return (
-    <Bedge dot>
+    <Badge dot>
       <Image
         src="https://picsum.photos/60"
         width={40}
         style={{ borderRadius: 0 }}
       />
-    </Bedge>
+    </Badge>
   );
 };

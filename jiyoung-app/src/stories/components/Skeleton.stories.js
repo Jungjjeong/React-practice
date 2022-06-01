@@ -31,26 +31,6 @@ export const Sample = () => {
         </div>
         <div style={{ clear: "both" }} />
       </div>
-
-      <div style={{ marginTop: 16 }}>
-        <div style={{ float: "left", marginRight: 16 }}>
-          <Skeleton.Circle size={60} />
-        </div>
-        <div style={{ float: "left", width: "80%" }}>
-          <Skeleton.Paragraph line={4} />
-        </div>
-        <div style={{ clear: "both" }} />
-      </div>
-
-      <div style={{ marginTop: 16 }}>
-        <div style={{ float: "left", marginRight: 16 }}>
-          <Skeleton.Circle size={60} />
-        </div>
-        <div style={{ float: "left", width: "80%" }}>
-          <Skeleton.Paragraph line={4} />
-        </div>
-        <div style={{ clear: "both" }} />
-      </div>
     </>
   );
 };
