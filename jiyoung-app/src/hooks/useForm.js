@@ -17,7 +17,7 @@ const useForm = ({ initialValues, onSubmit, validate }) => {
     const newErrors = validate(values);
 
     if (Object.keys(newErrors).length === 0) {
-      await onSubmit();
+      await onSubmit(values);
     }
 
     setErrors(newErrors);
