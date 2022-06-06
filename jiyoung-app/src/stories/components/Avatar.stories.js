@@ -1,4 +1,4 @@
-import Avatar from "../../components/_BasicComponent/Avatar";
+import Avatar from "../../components/base/Avatar";
 
 export default {
   title: "Component/Avatar",

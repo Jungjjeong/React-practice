@@ -1,4 +1,4 @@
-import Skeleton from "../../components/_BasicComponent/Skeleton";
+import Skeleton from "../../components/base/Skeleton";
 export default {
   title: "Component/Skeleton",
 };
