@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import useToggle from "../hooks/useToggle";
+import useToggle from "../../src/hooks/useToggle";
 
 const ToggleContainer = styled.label`
   display: inline-block;
