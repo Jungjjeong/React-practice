@@ -1,6 +1,6 @@
-import { Routes, Route } from "react-router";
-import { PostsPage, PostPage, NotFoundPage } from "@pages";
-import DefaultTemplate from "@components/template/DefaultTemplate";
+import { Routes, Route } from 'react-router';
+import { PostsPage, PostPage, NotFoundPage } from '@pages';
+import DefaultTemplate from '@components/template/DefaultTemplate';
 
 const App = () => {
   return (

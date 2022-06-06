@@ -1,10 +1,10 @@
-import useKeyPress from "../../hooks/useKeyPress";
+import useKeyPress from '../../hooks/useKeyPress';
 
 export default {
-  title: "Hook/useKeyPress",
+  title: 'Hook/useKeyPress',
 };
 
 export const Default = () => {
-  const pressed = useKeyPress("?");
-  return <>{pressed ? "Peeo-A-Bool" : "Press ? Key"}</>;
+  const pressed = useKeyPress('?');
+  return <>{pressed ? 'Peeo-A-Bool' : 'Press ? Key'}</>;
 };

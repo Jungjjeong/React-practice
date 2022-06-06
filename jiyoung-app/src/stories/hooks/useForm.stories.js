@@ -1,7 +1,7 @@
-import useForm from "../../hooks/useForm";
+import useForm from '../../hooks/useForm';
 
 export default {
-  title: "Hook/useForm",
+  title: 'Hook/useForm',
 };
 
 const sleep = () => {
@@ -13,8 +13,8 @@ const sleep = () => {
 export const Default = () => {
   const { isLoading, errors, handleChange, handleSubmit } = useForm({
     initialValues: {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     },
     onSubmit: async (values) => {
       await sleep();
@@ -22,10 +22,10 @@ export const Default = () => {
     },
     validate: ({ email, password }) => {
       const errors = {};
-      if (!email) errors.email = "이메일을 입력해주세요.";
-      if (!password) errors.password = "비밀번호를 입력해주세요.";
+      if (!email) errors.email = '이메일을 입력해주세요.';
+      if (!password) errors.password = '비밀번호를 입력해주세요.';
       if (!/^.+@.+\..+$/.test(email))
-        errors.email = "올바른 이메일을 입력해주세요.";
+        errors.email = '올바른 이메일을 입력해주세요.';
 
       return errors;
     },
@@ -52,7 +52,7 @@ export const Default = () => {
         {errors.password}
       </div>
       <button type="submit" disabled={isLoading}>
-        {isLoading ? "Loading..." : "Submit"}
+        {isLoading ? 'Loading...' : 'Submit'}
       </button>
     </form>
   );

@@ -1,8 +1,8 @@
-import { useParams } from "react-router";
-import { useAsync } from "@hooks";
-import { Spinner, Header, Text } from "@components";
-import axios from "axios";
-import { Fragment } from "react";
+import { useParams } from 'react-router';
+import { useAsync } from '@hooks';
+import { Spinner, Header, Text } from '@components';
+import axios from 'axios';
+import { Fragment } from 'react';
 
 const PostPage = () => {
   const { postId } = useParams();

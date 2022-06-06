@@ -1,16 +1,16 @@
-import useKey from "../../hooks/useKey";
+import useKey from '../../hooks/useKey';
 
 export default {
-  title: "Hook/useKey",
+  title: 'Hook/useKey',
 };
 
 export const Default = () => {
-  useKey("keydown", "f", () => {
-    alert("f keydown Event!");
+  useKey('keydown', 'f', () => {
+    alert('f keydown Event!');
   });
 
-  useKey("keyup", "q", () => {
-    alert("q keyup Event!");
+  useKey('keyup', 'q', () => {
+    alert('q keyup Event!');
   });
   return <>useKey</>;
 };

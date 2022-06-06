@@ -1,9 +1,9 @@
-import Flux from "../../components/base/Flux";
+import Flux from '../../components/base/Flux';
 
 const { Row, Col } = Flux;
 
 export default {
-  title: "Component/Flux",
+  title: 'Component/Flux',
   component: Flux,
 };
 
@@ -11,11 +11,11 @@ const Box = () => {
   return (
     <div
       style={{
-        backgroundColor: "#44b",
-        width: "100%",
+        backgroundColor: '#44b',
+        width: '100%',
         height: 18,
-        color: "white",
-        textAlign: "center",
+        color: 'white',
+        textAlign: 'center',
         borderRadius: 8,
       }}
     >

@@ -1,6 +1,6 @@
-import { useCallback, useEffect } from "react";
+import { useCallback, useEffect } from 'react';
 
-const useKey = (event = "keydown", targetKey, handler) => {
+const useKey = (targetKey, handle, event = 'keydown') => {
   const handleKey = useCallback(
     ({ key }) => {
       if (key === targetKey) {

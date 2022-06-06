@@ -1,9 +1,9 @@
-import { useState } from "react";
-import styled from "@emotion/styled";
-import useClickAway from "../../hooks/useClickAway";
+import { useState } from 'react';
+import styled from '@emotion/styled';
+import useClickAway from '../../hooks/useClickAway';
 
 export default {
-  title: "Hook/useClickAway",
+  title: 'Hook/useClickAway',
 };
 
 const Popover = styled.div`
@@ -16,13 +16,13 @@ const Popover = styled.div`
 export const Default = () => {
   const [show, setShow] = useState(false);
   const ref = useClickAway((e) => {
-    if (e.target.tagName !== "BUTTON") setShow(false);
+    if (e.target.tagName !== 'BUTTON') setShow(false);
   });
 
   return (
     <div>
       <button onClick={() => setShow(true)}>Show</button>
-      <Popover ref={ref} style={{ display: show ? "block" : "none" }}>
+      <Popover ref={ref} style={{ display: show ? 'block' : 'none' }}>
         Popover
       </Popover>
     </div>

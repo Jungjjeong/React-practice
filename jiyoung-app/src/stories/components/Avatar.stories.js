@@ -1,23 +1,23 @@
-import Avatar from "../../components/base/Avatar";
+import Avatar from '../../components/base/Avatar';
 
 export default {
-  title: "Component/Avatar",
+  title: 'Component/Avatar',
   component: Avatar,
   argTypes: {
-    src: { defaultValue: "https://picsum.photos/200" },
+    src: { defaultValue: 'https://picsum.photos/200' },
     shape: {
-      defaultValue: "circle",
-      control: "inline-radio",
-      options: ["circle", "round", "sqaure"],
+      defaultValue: 'circle',
+      control: 'inline-radio',
+      options: ['circle', 'round', 'sqaure'],
     },
     size: {
       defaultValue: 70,
-      control: { type: "range", min: 40, max: 200 },
+      control: { type: 'range', min: 40, max: 200 },
     },
     mode: {
-      defaultValue: "cover",
-      control: "inline-radio",
-      options: ["contain", "cover", "fill"],
+      defaultValue: 'cover',
+      control: 'inline-radio',
+      options: ['contain', 'cover', 'fill'],
     },
   },
 };

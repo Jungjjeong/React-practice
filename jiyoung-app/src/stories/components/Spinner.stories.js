@@ -1,19 +1,19 @@
-import Spinner from "../../components/base/Spinner";
+import Spinner from '../../components/base/Spinner';
 
 export default {
-  title: "Component/Spinner",
+  title: 'Component/Spinner',
   component: Spinner,
   argTypes: {
     size: {
       defaultValue: 24,
-      control: "number",
+      control: 'number',
     },
     color: {
-      control: "color",
+      control: 'color',
     },
     loading: {
       defaultValue: true,
-      control: "boolean",
+      control: 'boolean',
     },
   },
 };

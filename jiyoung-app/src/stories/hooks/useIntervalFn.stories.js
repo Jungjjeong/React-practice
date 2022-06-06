@@ -1,14 +1,14 @@
-import { useState } from "react";
-import useIntervalFn from "../../hooks/useIntervalFn";
+import { useState } from 'react';
+import useIntervalFn from '../../hooks/useIntervalFn';
 
 export default {
-  title: "Hook/useIntervalFn",
+  title: 'Hook/useIntervalFn',
 };
 
 export const Default = () => {
   const [array, setArray] = useState([]);
   const [run, clear] = useIntervalFn(() => {
-    setArray([...array, "Plus"]);
+    setArray([...array, 'Plus']);
   }, 1000);
 
   return (

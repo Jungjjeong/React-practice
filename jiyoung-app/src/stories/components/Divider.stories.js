@@ -1,8 +1,8 @@
-import Divider from "../../components/base/Divider";
-import Text from "../../components/base/Text";
+import Divider from '../../components/base/Divider';
+import Text from '../../components/base/Text';
 
 export default {
-  title: "Component/Divider",
+  title: 'Component/Divider',
   component: Divider,
 };
 

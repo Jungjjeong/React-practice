@@ -1,7 +1,7 @@
-import Tab from "../../components/base/Tab";
+import Tab from '../../components/base/Tab';
 
 export default {
-  title: "Component/Tab",
+  title: 'Component/Tab',
   component: Tab,
 };
 

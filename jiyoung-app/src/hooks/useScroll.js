@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react";
-import useRafState from "./useRafState";
+import { useEffect, useRef } from 'react';
+import useRafState from './useRafState';
 
 const useScroll = () => {
   const [state, setState] = useRafState({ x: 0, y: 0 });
@@ -16,9 +16,9 @@ const useScroll = () => {
       });
     };
 
-    element.addEventListener("scroll", handleScroll, { passive: true });
+    element.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
-      element.removeEventListener("scroll", handleScroll);
+      element.removeEventListener('scroll', handleScroll);
     };
   }, [ref]);
 

@@ -1,14 +1,14 @@
-import { useState } from "react";
-import useInterval from "../../hooks/useInterval";
+import { useState } from 'react';
+import useInterval from '../../hooks/useInterval';
 
 export default {
-  title: "Hook/useInterval",
+  title: 'Hook/useInterval',
 };
 
 export const Default = () => {
   const [array, setArray] = useState([]);
   const clear = useInterval(() => {
-    setArray([...array, "Plus"]);
+    setArray([...array, 'Plus']);
   }, 1000);
 
   return (

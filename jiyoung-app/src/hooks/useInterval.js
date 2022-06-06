@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import useIntervalFn from "./useIntervalFn";
+import { useEffect } from 'react';
+import useIntervalFn from './useIntervalFn';
 
 const useInterval = (fn, ms) => {
   const [run, clear] = useIntervalFn(fn, ms);

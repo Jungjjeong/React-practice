@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef } from 'react';
 
 const useAsyncFn = (fn, deps) => {
   const lastCallId = useRef(0);

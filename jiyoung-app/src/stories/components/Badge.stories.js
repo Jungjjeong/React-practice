@@ -1,23 +1,23 @@
-import Badge from "../../components/base/Badge";
-import Image from "../../components/base/Image";
+import Badge from '../../components/base/Badge';
+import Image from '../../components/base/Image';
 
 export default {
-  title: "Component/Bedge",
+  title: 'Component/Bedge',
   component: Badge,
   argTypes: {
     count: {
       defaultValue: 10,
-      control: "number",
+      control: 'number',
     },
     maxCount: {
       defaultValue: 100,
-      control: "number",
+      control: 'number',
     },
-    backgroundColor: { control: "color" },
-    textColor: { control: "color" },
+    backgroundColor: { control: 'color' },
+    textColor: { control: 'color' },
     showZero: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
   },
 };

@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import useHover from "../../hooks/useHover";
+import styled from '@emotion/styled';
+import useHover from '../../hooks/useHover';
 
 export default {
-  title: "Hook/useHover",
+  title: 'Hook/useHover',
 };
 
 const Box = styled.div`
@@ -17,7 +17,7 @@ export const Default = () => {
   return (
     <>
       <Box ref={ref} />
-      {hover ? <div>HOVER</div> : ""}
+      {hover ? <div>HOVER</div> : ''}
     </>
   );
 };

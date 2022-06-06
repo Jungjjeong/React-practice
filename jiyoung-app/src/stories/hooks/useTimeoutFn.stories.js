@@ -1,12 +1,12 @@
-import useTimeoutFn from "../../hooks/useTimeoutFn";
+import useTimeoutFn from '../../hooks/useTimeoutFn';
 
 export default {
-  title: "Hook/useTimeoutFn",
+  title: 'Hook/useTimeoutFn',
 };
 
 export const Default = () => {
   const [run, clear] = useTimeoutFn(() => {
-    alert("실행");
+    alert('실행');
   }, 3000);
   return (
     <>

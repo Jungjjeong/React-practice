@@ -1,19 +1,19 @@
-import { Fragment, useState } from "react";
-import useDebounce from "../../hooks/useDebounce";
+import { Fragment, useState } from 'react';
+import useDebounce from '../../hooks/useDebounce';
 
 export default {
-  title: "Hook/useDebounce",
+  title: 'Hook/useDebounce',
 };
 
-const companies = ["Kakao", "Naver", "Coupang", "Line", "Woowahan"];
+const companies = ['Kakao', 'Naver', 'Coupang', 'Line', 'Woowahan'];
 
 export const Default = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const [result, setResult] = useState([]);
 
   useDebounce(
     () => {
-      if (value === "") setResult([]);
+      if (value === '') setResult([]);
       else {
         setResult(
           companies.filter((company) =>

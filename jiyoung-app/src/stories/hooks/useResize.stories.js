@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
-import { useState } from "react";
-import Image from "../../components/_BasicComponent/Image";
-import useResize from "../../hooks/useResize";
+import styled from '@emotion/styled';
+import { useState } from 'react';
+import Image from '../../components/_BasicComponent/Image';
+import useResize from '../../hooks/useResize';
 
 export default {
-  title: "Hook/useResize",
+  title: 'Hook/useResize',
 };
 
 const Background = styled.div`

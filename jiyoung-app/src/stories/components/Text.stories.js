@@ -1,18 +1,18 @@
-import Text from "../../components/base/Text";
+import Text from '../../components/base/Text';
 
 export default {
-  title: "Component/Text",
+  title: 'Component/Text',
   component: Text,
   argTypes: {
-    size: { control: "number" },
-    strong: { control: "boolean" },
-    underline: { control: "boolean" },
-    delete: { control: "boolean" },
-    block: { control: "boolean" },
-    paragraph: { control: "boolean" },
-    mark: { control: "boolean" },
-    code: { control: "boolean" },
-    color: { control: "color" },
+    size: { control: 'number' },
+    strong: { control: 'boolean' },
+    underline: { control: 'boolean' },
+    delete: { control: 'boolean' },
+    block: { control: 'boolean' },
+    paragraph: { control: 'boolean' },
+    mark: { control: 'boolean' },
+    code: { control: 'boolean' },
+    color: { control: 'color' },
   },
 };
 

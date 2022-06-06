@@ -4,25 +4,25 @@ import {
   useContext,
   useEffect,
   useReducer,
-} from "react";
+} from 'react';
 
 const PostContext = createContext();
 export const usePostContext = () => useContext(PostContext);
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case "INIT_POSTS": {
+    case 'INIT_POSTS': {
       return action.payload;
     }
-    case "ADD_POST": {
+    case 'ADD_POST': {
       return [...state, action.payload];
     }
-    case "DELETE_POST": {
+    case 'DELETE_POST': {
       const payload = action.payload;
       return state.filter((item) => item.id !== payload.id);
     }
     default: {
-      console.error("Wrong type");
+      console.error('Wrong type');
       break;
     }
   }
@@ -38,13 +38,13 @@ const PostProvider = ({
   const [posts, dispatch] = useReducer(reducer, initialPosts || []);
 
   useEffect(() => {
-    dispatch({ type: "INIT_POSTS", payload: initialPosts || [] });
+    dispatch({ type: 'INIT_POSTS', payload: initialPosts || [] });
   }, [initialPosts]);
 
   const onAddPost = useCallback(
     async (post) => {
       const payload = await handleAddPost(post);
-      dispatch({ type: "ADD_POST", payload });
+      dispatch({ type: 'ADD_POST', payload });
     },
     [handleAddPost]
   );
@@ -52,7 +52,7 @@ const PostProvider = ({
   const onDeletePost = useCallback(
     async (id) => {
       const payload = await handleDeletePost(id);
-      dispatch({ type: "DELETE_POST", payload });
+      dispatch({ type: 'DELETE_POST', payload });
     },
     [handleDeletePost]
   );

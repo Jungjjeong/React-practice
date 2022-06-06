@@ -1,5 +1,5 @@
-import { usePostContext } from "../../../contexts/PostProvider";
-import PostItem from "../PostItem";
+import { usePostContext } from '../../../contexts/PostProvider';
+import PostItem from '../PostItem';
 
 const PostList = () => {
   const { posts } = usePostContext();

@@ -1,15 +1,15 @@
-import useLocalStorage from "../../hooks/useLocalStorage";
+import useLocalStorage from '../../hooks/useLocalStorage';
 
 export default {
-  title: "Hook/useLocalStoreage",
+  title: 'Hook/useLocalStoreage',
 };
 
 export const Default = () => {
-  const [status, setStatus] = useLocalStorage("status", "404 NOT FOUND");
+  const [status, setStatus] = useLocalStorage('status', '404 NOT FOUND');
 
   return (
     <div>
-      <button onClick={() => setStatus("200 OK")}>Resend</button>
+      <button onClick={() => setStatus('200 OK')}>Resend</button>
       {status}
     </div>
   );

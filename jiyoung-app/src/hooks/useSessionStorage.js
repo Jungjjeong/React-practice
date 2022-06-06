@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 const useSessionStorage = (key, initialValue) => {
   const [storedValue, setStoredValue] = useState(() => {
@@ -14,7 +14,7 @@ const useSessionStorage = (key, initialValue) => {
   const setValue = (value) => {
     try {
       const valueToStore =
-        typeof value === "function" ? value(storedValue) : value;
+        typeof value === 'function' ? value(storedValue) : value;
 
       setStoredValue(valueToStore);
       sessionStorage.setItem(key, JSON.stringify(valueToStore));

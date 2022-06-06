@@ -1,32 +1,32 @@
-import Input from "../../components/base/Input";
+import Input from '../../components/base/Input';
 
 export default {
-  title: "Component/Input",
+  title: 'Component/Input',
   component: Input,
   argTypes: {
     label: {
-      defaultValue: "Label",
-      control: "text",
+      defaultValue: 'Label',
+      control: 'text',
     },
     block: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     invalid: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     required: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     disabled: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     readonly: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
   },
 };

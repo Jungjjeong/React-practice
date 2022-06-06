@@ -1,13 +1,13 @@
-import useAsyncFn from "../../hooks/usdAsyncFn";
+import useAsyncFn from '../../hooks/usdAsyncFn';
 
 export default {
-  title: "Hook/useAsyncFn",
+  title: 'Hook/useAsyncFn',
 };
 
 const asyncReturnValue = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Success");
+      resolve('Success');
     }, 1000);
   });
 };
@@ -15,7 +15,7 @@ const asyncReturnValue = () => {
 const asyncReturnError = () => {
   return new Promise((_, reject) => {
     setTimeout(() => {
-      reject("Failed");
+      reject('Failed');
     }, 1000);
   });
 };

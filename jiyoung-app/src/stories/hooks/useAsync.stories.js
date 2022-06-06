@@ -1,13 +1,13 @@
-import useAsync from "../../hooks/useAsync";
+import useAsync from '../../hooks/useAsync';
 
 export default {
-  title: "Hook/useAsync",
+  title: 'Hook/useAsync',
 };
 
 const asyncReturnValue = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve("Success");
+      resolve('Success');
     }, 1000);
   });
 };
@@ -15,7 +15,7 @@ const asyncReturnValue = () => {
 const asyncReturnError = () => {
   return new Promise((_, reject) => {
     setTimeout(() => {
-      reject("Failed");
+      reject('Failed');
     }, 1000);
   });
 };

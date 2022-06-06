@@ -1,24 +1,24 @@
-import useHotKey from "../../hooks/useHotKey";
-import { useState } from "react";
+import useHotKey from '../../hooks/useHotKey';
+import { useState } from 'react';
 
 export default {
-  title: "Hook/useHotKey",
+  title: 'Hook/useHotKey',
 };
 
 export const Default = () => {
-  const [value, setValue] = useState("");
+  const [value, setValue] = useState('');
   const hotkeys = [
     {
       global: true,
-      combo: "meta+shift+k",
+      combo: 'meta+shift+k',
       onKeyDown: (e) => {
-        alert("meta+shift+k");
+        alert('meta+shift+k');
       },
     },
     {
-      combo: "esc",
+      combo: 'esc',
       onKeyDown: (e) => {
-        setValue("");
+        setValue('');
       },
     },
   ];

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useCallback, useEffect, useState, useRef } from 'react';
 
 const useHover = () => {
   const [state, setState] = useState(false);
@@ -11,12 +11,12 @@ const useHover = () => {
     const element = ref.current;
     if (!element) return;
 
-    element.addEventListener("mouseover", handleMouseOver);
-    element.addEventListener("mouseout", handleMouseOut);
+    element.addEventListener('mouseover', handleMouseOver);
+    element.addEventListener('mouseout', handleMouseOut);
 
     return () => {
-      element.removeEventListener("mouseover", handleMouseOver);
-      element.removeEventListener("mouseout", handleMouseOut);
+      element.removeEventListener('mouseover', handleMouseOver);
+      element.removeEventListener('mouseout', handleMouseOut);
     };
   }, [ref, handleMouseOver, handleMouseOut]);
 

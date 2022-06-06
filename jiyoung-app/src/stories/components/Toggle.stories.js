@@ -1,11 +1,11 @@
-import Toggle from "../../components/base/Toggle";
+import Toggle from '../../components/base/Toggle';
 
 export default {
-  title: "Component/Toggle",
+  title: 'Component/Toggle',
   component: Toggle,
   argTypes: {
     disabled: {
-      control: "boolean",
+      control: 'boolean',
     },
   },
 };

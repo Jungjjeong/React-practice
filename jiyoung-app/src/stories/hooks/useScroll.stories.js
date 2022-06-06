@@ -1,8 +1,8 @@
-import styled from "@emotion/styled";
-import useScroll from "../../hooks/useScroll";
+import styled from '@emotion/styled';
+import useScroll from '../../hooks/useScroll';
 
 export default {
-  title: "Hook/useScroll",
+  title: 'Hook/useScroll',
 };
 
 const Box = styled.div`
@@ -27,7 +27,7 @@ export const Default = () => {
       </Box>
       <button
         onClick={() => {
-          ref.current.scrollTo({ top: 20000, left: 20000, behavior: "smooth" });
+          ref.current.scrollTo({ top: 20000, left: 20000, behavior: 'smooth' });
         }}
       >
         Scroll

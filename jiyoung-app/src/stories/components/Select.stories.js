@@ -1,39 +1,39 @@
-import Select from "../../components/base/Select";
+import Select from '../../components/base/Select';
 
 export default {
-  title: "Component/Select",
+  title: 'Component/Select',
   component: Select,
   argTypes: {
     label: {
-      defaultValue: "Label",
-      control: "text",
+      defaultValue: 'Label',
+      control: 'text',
     },
     placeholder: {
-      defaultValue: "Placeholder",
-      control: "text",
+      defaultValue: 'Placeholder',
+      control: 'text',
     },
     block: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     invalid: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     disabled: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
     required: {
       defaultValue: false,
-      control: "boolean",
+      control: 'boolean',
     },
   },
 };
 
 export const Default = (args) => (
   <Select
-    data={["Item 1", "Item 2", { label: "Item 3", value: "value" }]}
+    data={['Item 1', 'Item 2', { label: 'Item 3', value: 'value' }]}
     {...args}
   />
 );

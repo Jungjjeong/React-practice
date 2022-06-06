@@ -1,7 +1,7 @@
-import { useCallback, useState } from "react";
-import { Link } from "react-router-dom";
-import { Header, Spinner } from "../..";
-import { usePostContext } from "../../../contexts/PostProvider";
+import { useCallback, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Header, Spinner } from '../..';
+import { usePostContext } from '../../../contexts/PostProvider';
 
 const PostItem = ({ post }) => {
   const [loading, setLoading] = useState(false);
@@ -21,7 +21,7 @@ const PostItem = ({ post }) => {
       <Header level={3} strong>
         {post.title}
       </Header>
-      <Link to={`/posts/${post.id}`}>Detail -{">"}</Link>
+      <Link to={`/posts/${post.id}`}>Detail -{'>'}</Link>
       <div>
         {loading ? (
           <Spinner />

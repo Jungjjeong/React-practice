@@ -1,52 +1,52 @@
-import Image from "../../components/base/Image";
+import Image from '../../components/base/Image';
 
 export default {
-  title: "Component/Image",
+  title: 'Component/Image',
   component: Image,
   argTypes: {
     src: {
-      name: "src",
-      type: { name: "string", require: true },
-      defaultValue: "https://picsum.photos/200",
-      control: { type: "text" },
+      name: 'src',
+      type: { name: 'string', require: true },
+      defaultValue: 'https://picsum.photos/200',
+      control: { type: 'text' },
     },
     placeholder: {
-      name: "placeholder",
-      type: { name: "string", require: true },
-      defaultValue: "https://via.placeholder.com/200",
-      control: { type: "text" },
+      name: 'placeholder',
+      type: { name: 'string', require: true },
+      defaultValue: 'https://via.placeholder.com/200',
+      control: { type: 'text' },
     },
     threshold: {
-      type: { name: "number" },
+      type: { name: 'number' },
       defaultValue: 0.5,
-      control: { type: "number" },
+      control: { type: 'number' },
     },
     lazy: {
       defaultValue: false,
-      control: { type: "boolean" },
+      control: { type: 'boolean' },
     },
     block: {
       defaultValue: false,
-      control: { type: "boolean" },
+      control: { type: 'boolean' },
     },
     width: {
-      name: "width",
+      name: 'width',
       defaultValue: 200,
-      control: { type: "range", min: 200, max: 600 },
+      control: { type: 'range', min: 200, max: 600 },
     },
     height: {
-      name: "height",
+      name: 'height',
       defaultValue: 200,
-      control: { type: "range", min: 200, max: 600 },
+      control: { type: 'range', min: 200, max: 600 },
     },
     alt: {
-      name: "alt",
-      control: "string",
+      name: 'alt',
+      control: 'string',
     },
     mode: {
-      defaultValue: "cover",
-      options: ["cover", "fill", "contain"],
-      control: { type: "inline-radio" },
+      defaultValue: 'cover',
+      options: ['cover', 'fill', 'contain'],
+      control: { type: 'inline-radio' },
     },
   },
 };

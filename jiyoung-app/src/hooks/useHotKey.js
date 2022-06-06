@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo } from "react";
+import { useCallback, useEffect, useMemo } from 'react';
 
 const ModifierBitMasks = {
   alt: 1,
@@ -8,41 +8,41 @@ const ModifierBitMasks = {
 };
 
 const ShiftKeys = {
-  "~": "`",
-  "!": "1",
-  "@": "2",
-  "#": "3",
-  $: "4",
-  "%": "5",
-  "^": "6",
-  "&": "7",
-  "*": "8",
-  "(": "9",
-  ")": "0",
-  _: "-",
-  "+": "=",
-  "{": "[",
-  "}": "]",
-  "|": "\\",
-  ":": ";",
+  '~': '`',
+  '!': '1',
+  '@': '2',
+  '#': '3',
+  $: '4',
+  '%': '5',
+  '^': '6',
+  '&': '7',
+  '*': '8',
+  '(': '9',
+  ')': '0',
+  _: '-',
+  '+': '=',
+  '{': '[',
+  '}': ']',
+  '|': '\\',
+  ':': ';',
   '"': "'",
-  "<": ",",
-  ">": ".",
-  "?": "/",
+  '<': ',',
+  '>': '.',
+  '?': '/',
 };
 
 const Aliases = {
-  win: "meta",
-  window: "meta",
-  cmd: "meta",
-  command: "meta",
-  esc: "escape",
-  opt: "alt",
-  option: "alt",
+  win: 'meta',
+  window: 'meta',
+  cmd: 'meta',
+  command: 'meta',
+  esc: 'escape',
+  opt: 'alt',
+  option: 'alt',
 };
 
 const getKeyCombo = (e) => {
-  const key = e.key !== " " ? e.key.toLowerCase() : "space";
+  const key = e.key !== ' ' ? e.key.toLowerCase() : 'space';
 
   let modifiers = 0;
   if (e.altKey) modifiers += ModifierBitMasks.alt;
@@ -54,7 +54,7 @@ const getKeyCombo = (e) => {
 };
 
 const parseKeyCombo = (combo) => {
-  const pieces = combo.replace(/\s/g, "").toLowerCase().split("+");
+  const pieces = combo.replace(/\s/g, '').toLowerCase().split('+');
   let modifiers = 0;
   let key;
   for (const piece of pieces) {
@@ -94,14 +94,14 @@ const useHotKey = (hotkeys) => {
 
   const handleGlobalKeyDown = useCallback(
     (e) => {
-      invokeCallback(true, getKeyCombo(e), "onKeyDown", e);
+      invokeCallback(true, getKeyCombo(e), 'onKeyDown', e);
     },
     [invokeCallback]
   );
 
   const handleGlobalKeyUp = useCallback(
     (e) => {
-      invokeCallback(true, getKeyCombo(e), "onKeyUp", e);
+      invokeCallback(true, getKeyCombo(e), 'onKeyUp', e);
     },
     [invokeCallback]
   );
@@ -111,7 +111,7 @@ const useHotKey = (hotkeys) => {
       invokeCallback(
         false,
         getKeyCombo(e.nativeEvent),
-        "onKeyDown",
+        'onKeyDown',
         e.nativeEvent
       );
     },
@@ -123,7 +123,7 @@ const useHotKey = (hotkeys) => {
       invokeCallback(
         false,
         getKeyCombo(e.nativeEvent),
-        "onKeyUp",
+        'onKeyUp',
         e.nativeEvent
       );
     },
@@ -131,12 +131,12 @@ const useHotKey = (hotkeys) => {
   );
 
   useEffect(() => {
-    document.addEventListener("keydown", handleGlobalKeyDown);
-    document.addEventListener("keyup", handleGlobalKeyUp);
+    document.addEventListener('keydown', handleGlobalKeyDown);
+    document.addEventListener('keyup', handleGlobalKeyUp);
 
     return () => {
-      document.removeEventListener("keydown", handleGlobalKeyDown);
-      document.removeEventListener("keyup", handleGlobalKeyUp);
+      document.removeEventListener('keydown', handleGlobalKeyDown);
+      document.removeEventListener('keyup', handleGlobalKeyUp);
     };
   }, [handleGlobalKeyDown, handleGlobalKeyUp]);
 

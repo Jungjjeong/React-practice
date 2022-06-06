@@ -1,8 +1,8 @@
-import Modal from "../../components/base/Modal";
-import { useState } from "react";
+import Modal from '../../components/base/Modal';
+import { useState } from 'react';
 
 export default {
-  title: "Component/Modal",
+  title: 'Component/Modal',
   component: Modal,
 };
 

@@ -1,11 +1,11 @@
-import { useState } from "react";
-import Progress from "../../components/base/Progress";
+import { useState } from 'react';
+import Progress from '../../components/base/Progress';
 
 export default {
-  title: "Component/Progress",
+  title: 'Component/Progress',
   component: Progress,
   argTypes: {
-    value: { defaultValue: 10, control: "number" },
+    value: { defaultValue: 10, control: 'number' },
   },
 };
 
