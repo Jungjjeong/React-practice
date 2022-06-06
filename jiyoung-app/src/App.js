@@ -1,24 +1,27 @@
-import styled from "@emotion/styled";
-import "./App.css";
-import Header from "./components/Header";
-import NewTaskForm from "./components/NewTaskForm";
-import TaskList from "./components/TaskList";
-import TaskProvider from "./contexts/TaskProvider";
-
-const Container = styled.div`
-  width: 400px;
-  margin: 0 auto;
-`;
+import axios from "axios";
+import { useAsync } from "./hooks";
+import { Header, Spinner } from "./components/";
 
 function App() {
+  const initialPost = useAsync(async () => {
+    return await axios
+      .get("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.data);
+  }, []);
+
   return (
-    <TaskProvider>
-      <Container>
-        <Header>Todo</Header>
-        <NewTaskForm />
-        <TaskList css={{ marginTop: 16 }} />
-      </Container>
-    </TaskProvider>
+    <div>
+      <Header>Posts</Header>
+      <ul>
+        {initialPost.isLoading ? (
+          <Spinner />
+        ) : (
+          (initialPost.value || []).map((post) => (
+            <li key={post.id}>{post.title}</li>
+          ))
+        )}
+      </ul>
+    </div>
   );
 }
 
